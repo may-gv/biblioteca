@@ -22,13 +22,17 @@ use App\Http\Controllers\controladorVistas;
 Route::get('/principal', function () {
     return view('principal');
 });
-
-Route::get('/registro', function () {
-    return view('registro');
+*/
+/*Route::get('/autores', function () {
+    return view('autores');
 });*/
 Route::get('/principal', [controladorVistas::class, 'viewPrincipal'])->name('apodoPrin');
 
 Route::get('/registro', [controladorVistas::class, 'viewRegistro'])->name('apodoRegis');
+
+Route::get('/autores', [controladorVistas::class, 'viewAutores'])->name('apodoAut');
+
+Route::post('RegistrarAutor',[controladorVistas::class,'validarAutor'])->name('apodoAut');
 
 Route::post('RegistrarLibro',[controladorVistas::class,'validarFormulario'])->name('Registrar');
 

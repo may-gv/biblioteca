@@ -26,7 +26,10 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="/registro">Registro</a>
-              </li>           
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/autores">Registro Autores</a>
+              </li> 
             </ul>
           </div>
         </div>
