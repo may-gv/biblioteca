@@ -27,7 +27,7 @@ $titulo = session()->get('variable')
 @endif
         <div class="card-body">
 
-            <form class="m-4" method="post" action="RegistrarLibro" >
+            <form class="m-4" method="post" action="{{route('registro.store')}}" >
                 @csrf
                 <div class="mb-3">
                     <label class="form-label text-white"> ISBN: </label>
@@ -40,10 +40,16 @@ $titulo = session()->get('variable')
                     <p class="text-dark fst-italic fw-bold"> {{ $errors->first('txtTitulo') }}</p>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label text-white"> Autor: </label>
-                    <input type="text" class="form-control" name="txtAutor" id="" value="{{old('txtAutor')}}" placeholder="Autor del libro">
-                    <p class="text-dark fst-italic fw-bold"> {{ $errors->first('txtAutor') }}</p>
-                </div>
+                        <label class="form-label text-white fw-semibold"> Autor: </label>
+                       
+                        <select name="txtAutor" id="unos" class="form-control" style="background: #d3cbe4;" >
+                            <option selected disabled="disabled" value="" style="background: #d3cbe4">Selecciona Autor:</option>
+                            @foreach ($ConsultaAutores as $autor)
+                            <option value="{{$autor->id}}">{{$autor->Nombre}}</option>
+                                @endforeach
+                        </select>
+                        
+                    </div>
                 <div class="mb-3">
                     <label class="form-label text-white"> Numero de Páginas: </label>
                     <input type="number" class="form-control" name="txtPaginas" id="" value="{{old('txtPaginas')}}" placeholder="Num. de Páginas">

@@ -2,11 +2,7 @@
 
 @section('contenido')
 
-@if(session()->has('Enviado'))
-    <div class="alert alert-success" role="alert">
-        <p class="mb-0"> Se ha registrado el autor</p>
-    </div>
-@endif
+
 
 <div class="container mt-4 col-md-7 " style="background: rgba(51, 47, 50, 0.795)"> 
     <div class="card mb-5 fw-bold fst-italic " style="background: rgba(70, 63, 67, 0.822)"> 
@@ -23,7 +19,7 @@
 @endif
         <div class="card-body">
 
-            <form class="m-4" method="post" action="RegistrarAutor" >
+            <form class="m-4" method="post" action="{{route('autores.store')}}" >
                 @csrf
                 <div class="mb-3">
                     <label class="form-label text-white"> Nombre Completo: </label>

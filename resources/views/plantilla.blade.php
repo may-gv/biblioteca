@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
     <title>BIBLIOTECA</title>
 </head>
@@ -25,11 +26,17 @@
                 <a class="nav-link active text-white" aria-current="page" href="/principal">Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="/registro">Registro</a>
+                <a class="nav-link text-white" href={{route('registro.create')}}>Registro Libros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="/autores">Registro Autores</a>
+                <a class="nav-link text-white" href={{route('registro.index')}}>Ver Libros</a>
               </li> 
+              <li class="nav-item">
+                <a class="nav-link text-white" href={{route('autores.create')}}>Registro Autores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href={{route('autores.index')}}>Ver Autores</a>
+              </li>  
             </ul>
           </div>
         </div>

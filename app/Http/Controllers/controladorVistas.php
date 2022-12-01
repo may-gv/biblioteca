@@ -35,5 +35,13 @@ class controladorVistas extends Controller
      return view('autores');
     }
   
+
+    public function showLibros(){
+        return view('libros');
+    }
+
+    public function showAutores(){
+        return view('ver_autores');
+    }
 }
 
